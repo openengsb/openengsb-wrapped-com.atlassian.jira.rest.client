@@ -23,7 +23,7 @@
   <parent>
     <groupId>org.openengsb.wrapped</groupId>
     <artifactId>openengsb-wrapped-parent</artifactId>
-    <version>8</version>
+    <version>3.0.0</version>
   </parent>
 
   <properties>
