@@ -1,0 +1,59 @@
+Licensed to the Austrian Association for Software Tool Integration (AASTI)
+under one or more contributor license agreements. See the NOTICE file
+distributed with this work for additional information regarding copyright
+ownership. The AASTI licenses this file to you under the Apache License,
+Version 2.0 (the "License"); you may not use this file except in compliance
+with the License. You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+This project includes:
+  AOP alliance under Public Domain
+  Atlassian Concurrency Utilities under Apache 2
+  Atlassian Event under BSD License
+  Atlassian HTTP Client API under Apache License, Version 2.0
+  Atlassian HTTP Client SPI under Apache License, Version 2.0
+  Atlassian HTTP Client, Apache HTTP components impl under Apache License, Version 2.0
+  Commons Codec under The Apache Software License, Version 2.0
+  Commons Lang under The Apache Software License, Version 2.0
+  Commons Logging under The Apache Software License, Version 2.0
+  Data Mapper for Jackson under The Apache Software License, Version 2.0
+  Guava: Google Core Libraries for Java under The Apache Software License, Version 2.0
+  HttpAsyncClient under Apache License
+  HttpAsyncClient Cache under Apache License
+  HttpClient under Apache License
+  HttpClient Cache under Apache License
+  HttpCore under Apache License
+  HttpCore NIO under Apache License
+  HttpMime under Apache License
+  Jackson under The Apache Software License, Version 2.0
+  JavaBeans Activation Framework (JAF) under Common Development and Distribution License (CDDL) v1.0
+  JAX-RS provider for JSON content type under The Apache Software License, Version 2.0 or GNU Lesser General Public License (LGPL), Version 2.1
+  JAXB API bundle for GlassFish V3 under CDDL 1.1 or GPL2 w/ CPE
+  JAXB RI under CDDL 1.1 or GPL2 w/ CPE
+  jersey-client under CDDL 1.1 or GPL2 w/ CPE
+  jersey-core under CDDL 1.1 or GPL2 w/ CPE
+  jersey-json under CDDL 1.1 or GPL2 w/ CPE
+  Jettison under Apache License, Version 2.0
+  JIRA REST Java Client - Implementation under Apache License, Version 2.0
+  JIRA REST Java Client - Public API under Apache License, Version 2.0
+  Joda time under Apache 2
+  OpenEngSB :: OSGi Wrapped Bundles :: Atlassian JIRA REST Client under Apache 2
+  Shared Application Access Layer API under BSD License
+  SLF4J API Module under MIT License
+  spring-aop under The Apache Software License, Version 2.0
+  spring-asm under The Apache Software License, Version 2.0
+  spring-beans under The Apache Software License, Version 2.0
+  spring-context under The Apache Software License, Version 2.0
+  spring-core under The Apache Software License, Version 2.0
+  spring-expression under The Apache Software License, Version 2.0
+  StAX API under The Apache Software License, Version 2.0
+  Streaming API for XML under GNU General Public Library or COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0
+  Xml Compatibility extensions for Jackson under The Apache Software License, Version 2.0 or GNU Lesser General Public License (LGPL), Version 2.1
+
