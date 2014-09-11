@@ -36,7 +36,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <artifactId>com.atlassian.jira.rest.client</artifactId>
-  <version>2.0.0-m30.w1-SNAPSHOT</version>
+  <version>2.0.0-m30.w1</version>
 
   <name>OpenEngSB :: OSGi Wrapped Bundles :: Atlassian JIRA REST Client</name>
 
@@ -58,6 +58,7 @@
     <connection>scm:git:git://github.com/openengsb/openengsb-wrapped-com.atlassian.jira.rest.client.git</connection>
     <developerConnection>scm:git:git@github.com:openengsb/openengsb-wrapped-com.atlassian.jira.rest.client</developerConnection>
     <url>http://github.com/openengsb/openengsb-wrapped-com.atlassian.jira.rest.client</url>
+    <tag>v2.0.0-m30.w1</tag>
   </scm>
 
   <dependencies>
