@@ -13,7 +13,7 @@
     <description>JIRA REST Java Client bundled as a plugin.</description>
     <dependencies>
         <dependency>
-            <groupId>com.atlassian.jira</groupId>
+            <groupId>org.openengsb.wrapped</groupId>
             <artifactId>jira-rest-java-client-core</artifactId>
             <version>${project.version}</version>
         </dependency>

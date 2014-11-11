@@ -17,12 +17,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.atlassian.jira</groupId>
+            <groupId>org.openengsb.wrapped</groupId>
             <artifactId>jira-rest-java-client-api</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.atlassian.jira</groupId>
+            <groupId>org.openengsb.wrapped</groupId>
             <artifactId>jira-rest-java-client-core</artifactId>
             <version>${project.version}</version>
         </dependency>
