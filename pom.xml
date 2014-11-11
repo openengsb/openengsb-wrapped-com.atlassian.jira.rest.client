@@ -156,6 +156,10 @@
                 <checksumPolicy>warn</checksumPolicy>
             </releases>
         </repository>
+        <repository>
+            <id>opencast-public</id>
+            <url>http://repository.opencastproject.org/nexus/content/repositories/public</url>
+        </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
