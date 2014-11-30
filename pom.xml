@@ -27,7 +27,8 @@
   </parent>
 
   <properties>
-    <com.atlassian.jira.rest.client.version>2.0.0-m30</com.atlassian.jira.rest.client.version>
+    <com.atlassian.jira.rest.client.version>2.0.0-m31</com.atlassian.jira.rest.client.version>
+    <jersey.client.version>1.18.2</jersey.client.version>
     <bundle.symbolicName>com.atlassian.jira.rest.client</bundle.symbolicName>
     <bundle.version>${project.version}</bundle.version>
     <package.version>${com.atlassian.jira.rest.client.version}</package.version>
@@ -36,7 +37,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <artifactId>com.atlassian.jira.rest.client</artifactId>
-  <version>2.0.0-m30.w2-SNAPSHOT</version>
+  <version>2.0.0-m31.w1-SNAPSHOT</version>
 
   <name>OpenEngSB :: OSGi Wrapped Bundles :: Atlassian JIRA REST Client</name>
 
@@ -66,6 +67,17 @@
       <groupId>com.atlassian.jira</groupId>
       <artifactId>jira-rest-java-client-core</artifactId>
       <version>${com.atlassian.jira.rest.client.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-client</artifactId>
+      <version>${jersey.client.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-json</artifactId>
+      <version>${jersey.client.version}</version>
     </dependency>
   </dependencies>
 
