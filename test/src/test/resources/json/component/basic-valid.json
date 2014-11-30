@@ -1,5 +1,0 @@
-{
-	"self":"http://localhost:8090/jira/rest/api/latest/component/10000",
-	"name":"Component A",
-	"description":"this is some description of component A"
-}

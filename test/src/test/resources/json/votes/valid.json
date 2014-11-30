@@ -1,5 +1,0 @@
-{
-	"self":"http://localhost:8090/jira/rest/api/latest/issue/TST-1/votes",
-	"votes":1,
-	"hasVoted":true
-}
