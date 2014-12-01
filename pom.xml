@@ -1,180 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.openengsb.wrapped</groupId>
-        <artifactId>openengsb-wrapped-parent</artifactId>
-        <version>3.0.0</version>
-    </parent>
+    Licensed to the Austrian Association for Software Tool Integration (AASTI)
+    under one or more contributor license agreements. See the NOTICE file
+    distributed with this work for additional information regarding copyright
+    ownership. The AASTI licenses this file to you under the Apache License,
+    Version 2.0 (the "License"); you may not use this file except in compliance
+    with the License. You may obtain a copy of the License at
 
-    <artifactId>jira-rest-java-client-parent</artifactId>
-    <version>2.0.0-m32.w2-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <name>JIRA REST Java Client</name>
-    <description>Java library which allows to easily talk to any JIRA 5.0+ instance.</description>
-    <issueManagement>
-        <system>JIRA</system>
-        <url>https://ecosystem.atlassian.net/browse/JRJC</url>
-    </issueManagement>
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
+        http://www.apache.org/licenses/LICENSE-2.0
 
-    <scm>
-        <connection>scm:git:git://github.com/openengsb/openengsb-wrapped-com.atlassian.jira.rest.client.git</connection>
-        <developerConnection>scm:git:git@github.com:openengsb/openengsb-wrapped-com.atlassian.jira.rest.client</developerConnection>
-        <url>http://github.com/openengsb/openengsb-wrapped-com.atlassian.jira.rest.client</url>
-        <tag>HEAD</tag>
-    </scm>
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <parent>
+    <groupId>org.openengsb.wrapped</groupId>
+    <artifactId>openengsb-wrapped-parent</artifactId>
+    <version>3.0.0</version>
+  </parent>
+
+  <properties>
+    <com.atlassian.jira.rest.client.version>2.0.0-m31</com.atlassian.jira.rest.client.version>
+    <jersey.client.version>1.18.2</jersey.client.version>
+    <bundle.symbolicName>com.atlassian.jira.rest.client</bundle.symbolicName>
+    <bundle.version>${project.version}</bundle.version>
+    <package.version>${com.atlassian.jira.rest.client.version}</package.version>
+    <bundle.namespace>com.atlassian.jira.rest.client</bundle.namespace>
+  </properties>
+
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>com.atlassian.jira.rest.client</artifactId>
+  <version>2.0.0-m31.w1-SNAPSHOT</version>
+
+  <name>OpenEngSB :: OSGi Wrapped Bundles :: Atlassian JIRA REST Client</name>
+
+  <packaging>bundle</packaging>
+
+  <description>This Bundle wraps the com.atlassian.jira.rest.client jar.</description>
+
+  <url>http://www.openengsb.org</url>
+
+  <licenses>
+    <license>
+      <name>Apache 2</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:git://github.com/openengsb/openengsb-wrapped-com.atlassian.jira.rest.client.git</connection>
+    <developerConnection>scm:git:git@github.com:openengsb/openengsb-wrapped-com.atlassian.jira.rest.client</developerConnection>
+    <url>http://github.com/openengsb/openengsb-wrapped-com.atlassian.jira.rest.client</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.atlassian.jira</groupId>
+      <artifactId>jira-rest-java-client-core</artifactId>
+      <version>${com.atlassian.jira.rest.client.version}</version>
+    </dependency>
     
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jira.version>5.2.8</jira.version>
-        <jira.data.version>${jira.version}</jira.data.version>
-        <jira.test-lib.version>${jira.version}</jira.test-lib.version>
-        <remotable.plugins.version>0.8.2</remotable.plugins.version>
-        <jdkLevel>1.6</jdkLevel>
-        <jersey.client.version>1.18.2</jersey.client.version>
-        <joda.time.version>1.6</joda.time.version>
-        <!-- IMPORTANT: keep synchronized with JIRA -->
-        <guava.version>10.0.1</guava.version>
-        <findbugs.version>1.3.7</findbugs.version>
-        <atlassian.httpclient.version>0.13.2</atlassian.httpclient.version>
-        <atlassian.concurrent.version>2.4.0-M9</atlassian.concurrent.version>
-        <amps.version>4.1.1</amps.version>
-        <testkit.version>5.2-m29</testkit.version>
-        
-        <bundle.symbolicName>com.atlassian.jira.rest.client</bundle.symbolicName>
-        <bundle.version>${project.version}</bundle.version>
-        <package.version>${project.version}</package.version>
-        <bundle.namespace>com.atlassian.jira.rest.client</bundle.namespace>
-    </properties>
-    <modules>
-        <module>api</module>
-        <module>core</module>
-        <module>plugin</module>
-        <module>test</module>
-    </modules>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.sun.jersey</groupId>
-                <artifactId>jersey-client</artifactId>
-                <version>${jersey.client.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.sun.jersey</groupId>
-                <artifactId>jersey-json</artifactId>
-                <version>${jersey.client.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.atlassian.httpclient</groupId>
-                <artifactId>atlassian-httpclient-api</artifactId>
-                <version>${atlassian.httpclient.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.atlassian.httpclient</groupId>
-                <artifactId>atlassian-httpclient-spi</artifactId>
-                <version>${atlassian.httpclient.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.atlassian.httpclient</groupId>
-                <artifactId>atlassian-httpclient-apache-httpcomponents</artifactId>
-                <version>${atlassian.httpclient.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpmime</artifactId>
-                <version>4.1.2</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.httpcomponents</groupId>
-                        <artifactId>httpcore</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-    <dependencies>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.findbugs</groupId>
-            <artifactId>jsr305</artifactId>
-            <version>${findbugs.version}</version>
-            <optional>true</optional>
-        </dependency>
-    </dependencies>
-    <build>
-        <pluginManagement>
-            <plugins>
-                <!-- somehow maven fails for me on this. This is used by the AMPS plugin, and can be removed once
-                     https://extranet.atlassian.com/jira/browse/BUILDENG-2663 is fixed, by upgrading the parent pom -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>2.12</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-</build>
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.7</version>
-                <configuration>
-                    <excludePackageNames>com.atlassian.jira.rest.client.internal.*</excludePackageNames>
-                </configuration>
-            </plugin>
-        </plugins>
-    </reporting>
-    <repositories>
-        <repository>
-            <id>atlassian-public</id>
-            <url>https://maven.atlassian.com/content/groups/public</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-                <checksumPolicy>warn</checksumPolicy>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-                <checksumPolicy>warn</checksumPolicy>
-            </releases>
-        </repository>
-        <repository>
-            <id>opencast-public</id>
-            <url>http://repository.opencastproject.org/nexus/content/repositories/public</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>atlassian-public</id>
-            <url>https://maven.atlassian.com/content/groups/public</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-                <checksumPolicy>warn</checksumPolicy>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-                <checksumPolicy>warn</checksumPolicy>
-            </releases>
-        </pluginRepository>
-    </pluginRepositories>
+    <dependency>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-client</artifactId>
+      <version>${jersey.client.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-json</artifactId>
+      <version>${jersey.client.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Export-Package>
+              !javax.xml.*,
+              !org.springframework.asm.*,
+              !org.springframework.beans.factory.support.*,
+              !org.apache.commons.*,
+              !org.springframework.beans.factory.config.*,
+              !org.springframework.core.*,
+              !org.springframework.beans.support.*,
+              !org.aopalliance.aop.*,
+              !org.aopalliance.intercept.*,
+              !org.springframework.util.*,
+              !org.springframework.beans,
+              !org.springframework.beans.factory,
+              !javax.activation.*,
+              !org.slf4j.*,
+              !com.google.common.*,
+              *;-split-package:=merge-first
+            </Export-Package>
+            <Private-Package>
+              org.springframework.beans.factory
+            </Private-Package>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <repositories>
+    <repository>
+      <id>atlassian-public</id>
+      <url>https://maven.atlassian.com/content/groups/public</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>daily</updatePolicy>
+        <checksumPolicy>warn</checksumPolicy>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+        <checksumPolicy>warn</checksumPolicy>
+      </releases>
+    </repository>
+  </repositories>
 </project>
 
